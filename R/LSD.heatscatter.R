@@ -28,6 +28,9 @@
 #' @param color.contour R build-in color for the contour lines.
 #' @param greyscale logical: if \code{TRUE} (\code{FALSE} by default), the used colorpalette is converted to greyscales.
 #' @param log a character string which contains "x" if the x axis is to be logarithmic, "y" if the y axis is to be logarithmic and "xy" or "yx" if both axes are to be logarithmic.
+#' @param ggplot a logical: if \code{TRUE} uses the ggplot2 library to create plots.
+#' @param xlab x labels, standard graphics parameter.
+#' @param ylab y labels, standard graphics parameter.
 #' @param ... additional parameters to be passed to points and plot.
 #' @author Bjoern Schwalb
 #' @seealso \code{\link{comparisonplot}}, \code{\link{demotour}}, \code{\link{disco}}, \code{\link{colorpalette}}
@@ -47,7 +50,7 @@
 #' @keywords scatterplot, heatcolors
 
 
-heatscatterpoints = function(x,y,pch = 19,cexplot = 0.5,nrcol = 30,grid = 100,colpal = "heat",simulate = FALSE,daltonize = FALSE,cvd = "p",alpha = NULL,rev = FALSE,xlim = NULL,ylim = NULL,only = "none",add.contour = FALSE,nlevels = 10,color.contour = "black",greyscale = FALSE,log = "",...)
+heatscatterpoints = function(x,y,pch = 19,cexplot = 0.5,nrcol = 30,grid = 100,colpal = "heat",simulate = FALSE,daltonize = FALSE,cvd = "p",alpha = NULL,rev = FALSE,xlim = NULL,ylim = NULL,only = "none",add.contour = FALSE,nlevels = 10,color.contour = "black",greyscale = FALSE,log = "",ggplot = FALSE, xlab=NULL, ylab=NULL,...)
 {
 	# soundcheck #
 	
@@ -67,7 +70,6 @@ heatscatterpoints = function(x,y,pch = 19,cexplot = 0.5,nrcol = 30,grid = 100,co
 	}
 	
 	# color handling #
-	
 	colpal = colorpalette(colpal,nrcol,simulate = simulate,daltonize = daltonize,cvd = cvd,alpha = alpha,rev = rev)
 	if (greyscale){colpal = convertgrey(colpal)}
 	
@@ -138,13 +140,34 @@ heatscatterpoints = function(x,y,pch = 19,cexplot = 0.5,nrcol = 30,grid = 100,co
 	heatvec = unlist(apply(cbind(xdiscrete,ydiscrete),1,getfrommat))
 	coldiscrete = todiscrete(heatvec,min(d$z),max(d$z),bins=nrcol)
 	
-	# add to existing graphics device #
-
-	points(x,y,col=colpal[coldiscrete],pch=pch,cex=cexplot,...)
+  if (ggplot){
+    
+    require(ggplot2)
+    
+    df_plot <- dplyr::tibble(x=x, y=y, col=1:length(x))
+    
+    # create new ggplot
+    gg <- df_plot %>% 
+      ggplot(aes(x=x, y=y)) +
+      geom_point(aes(colour = factor(col)), show.legend = FALSE) +
+      scale_colour_manual(values = colpal[coldiscrete]) +
+      theme_classic() +
+      labs( x=xlab, y=ylab )
+    
+    print(gg)
+    
+  } else {
+    
+    # add to existing graphics device #
+    points( x, y, col=colpal[coldiscrete], pch=pch, cex=cexplot, ... )
+    gg <- NULL
+  }
 	
 	# handle 'add.contour' option #
 
 	if (add.contour){contour(d,add=TRUE,nlevels=nlevels,col=color.contour)}
+	
+	return(gg)
 }
 
 
@@ -187,6 +210,7 @@ LSD.heatscatterpoints = heatscatterpoints
 #' @param color.contour R build-in color for the contour lines.
 #' @param greyscale logical: if \code{TRUE} (\code{FALSE} by default), the used colorpalette is converted to greyscales.
 #' @param log a character string which contains "x" if the x axis is to be logarithmic, "y" if the y axis is to be logarithmic and "xy" or "yx" if both axes are to be logarithmic.
+#' @param ggplot a logical: if \code{TRUE} uses the ggplot2 library to create plots.
 #' @param ... additional parameters to be passed to points and plot.
 #' @author Achim Tresch, Bjoern Schwalb
 #' @seealso \code{\link{comparisonplot}}, \code{\link{demotour}}, \code{\link{disco}}, \code{\link{colorpalette}}
@@ -207,7 +231,7 @@ LSD.heatscatterpoints = heatscatterpoints
 #' @keywords scatterplot, heatcolors
 
 
-heatscatter = function(x,y,pch = 19,cexplot = 0.5,nrcol = 30,grid = 100,colpal = "heat",simulate = FALSE,daltonize = FALSE,cvd = "p",alpha = NULL,rev = FALSE,xlim = NULL,ylim = NULL,xlab = NULL,ylab = NULL,main = "heatscatter",cor = FALSE,method = "spearman",only = "none",add.contour = FALSE,nlevels = 10,color.contour = "black",greyscale = FALSE,log = "",...)
+heatscatter = function(x,y,pch = 19,cexplot = 0.5,nrcol = 30,grid = 100,colpal = "heat",simulate = FALSE,daltonize = FALSE,cvd = "p",alpha = NULL,rev = FALSE,xlim = NULL,ylim = NULL,xlab = NULL,ylab = NULL,main = "heatscatter",cor = FALSE,method = "spearman",only = "none",add.contour = FALSE,nlevels = 10,color.contour = "black",greyscale = FALSE,log = "",ggplot = FALSE,...)
 {
 	# parse variable names #
 	
@@ -251,9 +275,14 @@ heatscatter = function(x,y,pch = 19,cexplot = 0.5,nrcol = 30,grid = 100,colpal =
 	
 	# handle graphics device  #
 	
-	plot(x,y,xlim=xlim,ylim=ylim,xlab=xlab,ylab=ylab,main="",type = "n",log = log,...)
-	heatscatterpoints(x,y,pch = pch,cexplot = cexplot,nrcol = nrcol,grid = grid,colpal = colpal,simulate = simulate,daltonize = daltonize,cvd = cvd,alpha = alpha,rev = rev,xlim = xlim,ylim = ylim,only = only,add.contour = add.contour,nlevels = nlevels,color.contour = color.contour,greyscale = greyscale,log = log,...)
-	mtext(paste(main),3,2,cex=1.25)
+	if (ggplot){
+	  heatscatterpoints(x,y,pch = pch,cexplot = cexplot,nrcol = nrcol,grid = grid,colpal = colpal,simulate = simulate,daltonize = daltonize,cvd = cvd,alpha = alpha,rev = rev,xlim = xlim,ylim = ylim,only = only,add.contour = add.contour,nlevels = nlevels,color.contour = color.contour,greyscale = greyscale,log = log, ggplot=ggplot,xlab=xlab,ylab=ylab,...)
+	} else {
+	  plot(x,y,xlim=xlim,ylim=ylim,xlab=xlab,ylab=ylab,main="",type = "n",log = log,...)
+	  heatscatterpoints(x,y,pch = pch,cexplot = cexplot,nrcol = nrcol,grid = grid,colpal = colpal,simulate = simulate,daltonize = daltonize,cvd = cvd,alpha = alpha,rev = rev,xlim = xlim,ylim = ylim,only = only,add.contour = add.contour,nlevels = nlevels,color.contour = color.contour,greyscale = greyscale,log = log, ggplot=ggplot,xlab=xlab,ylab=ylab,...)
+	  mtext(paste(main),3,2,cex=1.25)
+	}
+	
 }
 
 
