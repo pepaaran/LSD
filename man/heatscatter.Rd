@@ -64,7 +64,7 @@ heatscatter(x, y, pch = 19, cexplot = 0.5, nrcol = 30, grid = 100,
 
 \item{log}{a character string which contains "x" if the x axis is to be logarithmic, "y" if the y axis is to be logarithmic and "xy" or "yx" if both axes are to be logarithmic.}
 
-\item{ggplot}{a logical: if \code{TRUE} uses the ggplot2 library to create plots.}
+\item{ggplot}{a logical: if \code{TRUE} uses the ggplot2 library to create plots. Defaults to \code{FALSE}.}
 
 \item{...}{additional parameters to be passed to points and plot.}
 }

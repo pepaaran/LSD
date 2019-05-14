@@ -28,7 +28,7 @@
 #' @param color.contour R build-in color for the contour lines.
 #' @param greyscale logical: if \code{TRUE} (\code{FALSE} by default), the used colorpalette is converted to greyscales.
 #' @param log a character string which contains "x" if the x axis is to be logarithmic, "y" if the y axis is to be logarithmic and "xy" or "yx" if both axes are to be logarithmic.
-#' @param ggplot a logical: if \code{TRUE} uses the ggplot2 library to create plots.
+#' @param ggplot a logical: if \code{TRUE} uses the ggplot2 library to create plots. Defaults to \code{FALSE}.
 #' @param xlab x labels, standard graphics parameter.
 #' @param ylab y labels, standard graphics parameter.
 #' @param ... additional parameters to be passed to points and plot.
@@ -210,7 +210,7 @@ LSD.heatscatterpoints = heatscatterpoints
 #' @param color.contour R build-in color for the contour lines.
 #' @param greyscale logical: if \code{TRUE} (\code{FALSE} by default), the used colorpalette is converted to greyscales.
 #' @param log a character string which contains "x" if the x axis is to be logarithmic, "y" if the y axis is to be logarithmic and "xy" or "yx" if both axes are to be logarithmic.
-#' @param ggplot a logical: if \code{TRUE} uses the ggplot2 library to create plots.
+#' @param ggplot a logical: if \code{TRUE} uses the ggplot2 library to create plots. Defaults to \code{FALSE}.
 #' @param ... additional parameters to be passed to points and plot.
 #' @author Achim Tresch, Bjoern Schwalb
 #' @seealso \code{\link{comparisonplot}}, \code{\link{demotour}}, \code{\link{disco}}, \code{\link{colorpalette}}
