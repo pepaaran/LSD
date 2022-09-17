@@ -5,8 +5,7 @@
 \alias{LSD.webdesign}
 \title{Colored rectangular grid}
 \usage{
-webdesign(xlim, ylim, colpal = "rdbu", xlabels = NULL,
-  ylabels = NULL, ...)
+webdesign(xlim, ylim, colpal = "rdbu", xlabels = NULL, ylabels = NULL, ...)
 }
 \arguments{
 \item{xlim}{x limits, standard graphics parameter.}

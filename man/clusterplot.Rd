@@ -5,13 +5,30 @@
 \alias{LSD.clusterplot}
 \title{Visualize two-dimensional data clusters}
 \usage{
-clusterplot(input, label = NULL, at = NULL, main = NULL,
-  xlim = NULL, ylim = NULL, xlabels = NULL, fromto = c(0.05, 0.95),
-  colpal = "standardheat", simulate = FALSE, daltonize = FALSE,
-  cvd = "p", nrcol = 25, outer.col = "lightgrey",
-  quartiles.col = c("grey", "black", "grey"), add.quartiles = TRUE,
-  separate = TRUE, rev = FALSE, size = TRUE, alpha = NULL,
-  axes = TRUE, ...)
+clusterplot(
+  input,
+  label = NULL,
+  at = NULL,
+  main = NULL,
+  xlim = NULL,
+  ylim = NULL,
+  xlabels = NULL,
+  fromto = c(0.05, 0.95),
+  colpal = "standardheat",
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  nrcol = 25,
+  outer.col = "lightgrey",
+  quartiles.col = c("grey", "black", "grey"),
+  add.quartiles = TRUE,
+  separate = TRUE,
+  rev = FALSE,
+  size = TRUE,
+  alpha = NULL,
+  axes = TRUE,
+  ...
+)
 }
 \arguments{
 \item{input}{matrix or list with numerical entries.}

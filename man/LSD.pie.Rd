@@ -4,12 +4,31 @@
 \alias{LSD.pie}
 \title{Custom-built piechart version}
 \usage{
-LSD.pie(props, x = 0, y = 0, radius = 1, colpal = "prgn",
-  simulate = FALSE, daltonize = FALSE, cvd = "p", edges = 1000,
-  add = FALSE, xlim = c(-1, 1), ylim = c(-1, 1),
-  main = "LSD.pie: piecharts", alpha = NULL, addPercent = FALSE,
-  textcol = "black", clockwise = FALSE, init.angle = 0,
-  labels = c(), cex = 1, cex.percentage = cex, border = NA, ...)
+LSD.pie(
+  props,
+  x = 0,
+  y = 0,
+  radius = 1,
+  colpal = "prgn",
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  edges = 1000,
+  add = FALSE,
+  xlim = c(-1, 1),
+  ylim = c(-1, 1),
+  main = "LSD.pie: piecharts",
+  alpha = NULL,
+  addPercent = FALSE,
+  textcol = "black",
+  clockwise = FALSE,
+  init.angle = 0,
+  labels = c(),
+  cex = 1,
+  cex.percentage = cex,
+  border = NA,
+  ...
+)
 }
 \arguments{
 \item{props}{a numeric vector giving the relations of the pie pieces (need not to be normalized).}

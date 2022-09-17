@@ -5,10 +5,25 @@
 \alias{LSD.msdplot}
 \title{Visualize two-dimensional data clusters}
 \usage{
-msdplot(input, label = NULL, at = NULL, xlim = NULL, ylim = NULL,
-  xlab = "", ylab = "", main = "msdplot", xaxt = "s",
-  xlabels = NULL, las = 1, separate = TRUE, size = TRUE,
-  col = "darkgreen", bars = TRUE, alpha = 50, ...)
+msdplot(
+  input,
+  label = NULL,
+  at = NULL,
+  xlim = NULL,
+  ylim = NULL,
+  xlab = "",
+  ylab = "",
+  main = "msdplot",
+  xaxt = "s",
+  xlabels = NULL,
+  las = 1,
+  separate = TRUE,
+  size = TRUE,
+  col = "darkgreen",
+  bars = TRUE,
+  alpha = 50,
+  ...
+)
 }
 \arguments{
 \item{input}{matrix or list with numerical entries, quantiles of cols will define lines.}

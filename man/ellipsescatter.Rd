@@ -5,10 +5,22 @@
 \alias{LSD.ellipsescatter}
 \title{Visualize subgroups of two-dimensional data assuming normal distributions}
 \usage{
-ellipsescatter(x, y, groups, colors = NULL, pch = 20,
-  bgcol = "darkgrey", main = "ellipsescatter", xlab = NULL,
-  ylab = NULL, scalesd = 1, level = 0.75, legend.cex = 1,
-  location = "topright", ...)
+ellipsescatter(
+  x,
+  y,
+  groups,
+  colors = NULL,
+  pch = 20,
+  bgcol = "darkgrey",
+  main = "ellipsescatter",
+  xlab = NULL,
+  ylab = NULL,
+  scalesd = 1,
+  level = 0.75,
+  legend.cex = 1,
+  location = "topright",
+  ...
+)
 }
 \arguments{
 \item{x}{a numeric vector.}

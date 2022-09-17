@@ -5,12 +5,32 @@
 \alias{LSD.heatscatterpoints}
 \title{A colored scatterplot based on a two-dimensional Kernel Density Estimation (add to an existing plot)}
 \usage{
-heatscatterpoints(x, y, pch = 19, cexplot = 0.5, nrcol = 30,
-  grid = 100, colpal = "heat", simulate = FALSE, daltonize = FALSE,
-  cvd = "p", alpha = NULL, rev = FALSE, xlim = NULL, ylim = NULL,
-  only = "none", add.contour = FALSE, nlevels = 10,
-  color.contour = "black", greyscale = FALSE, log = "",
-  ggplot = FALSE, xlab = NULL, ylab = NULL, ...)
+heatscatterpoints(
+  x,
+  y,
+  pch = 19,
+  cexplot = 0.5,
+  nrcol = 30,
+  grid = 100,
+  colpal = "heat",
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  alpha = NULL,
+  rev = FALSE,
+  xlim = NULL,
+  ylim = NULL,
+  only = "none",
+  add.contour = FALSE,
+  nlevels = 10,
+  color.contour = "black",
+  greyscale = FALSE,
+  log = "",
+  ggplot = FALSE,
+  xlab = NULL,
+  ylab = NULL,
+  ...
+)
 }
 \arguments{
 \item{x}{a numeric vector.}

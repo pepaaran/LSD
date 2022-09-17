@@ -5,10 +5,16 @@
 \alias{LSD.intersphere}
 \title{Intersphere: a fancy Venn diagram}
 \usage{
-intersphere(data, colors = NULL, alpha = 25, cex = 1,
-  expand.circles = 1, expand.lims = 1.5,
-  main = "intersphere: overlap diagram", onlySets = seq(length(data),
-  2, by = -1))
+intersphere(
+  data,
+  colors = NULL,
+  alpha = 25,
+  cex = 1,
+  expand.circles = 1,
+  expand.lims = 1.5,
+  main = "intersphere: overlap diagram",
+  onlySets = seq(length(data), 2, by = -1)
+)
 }
 \arguments{
 \item{data}{a list with n entries having elements that can be represented as sets (have union and intersect methods).}

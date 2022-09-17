@@ -5,10 +5,25 @@
 \alias{LSD.plotit}
 \title{Plotting wrapper function to plot plots in printable quality and all kinds of formats}
 \usage{
-plotit(filename, sw = 1, sh = 1, sres = 1, plotsfkt, ww = 7,
-  wh = 7, pointsize = 12, dev.pointsize = 8, paper = "special",
-  quality = 100, units = "px", bg = "white", fileformat = "jpeg",
-  saveit = FALSE, notinR = FALSE, addformat = NULL)
+plotit(
+  filename,
+  sw = 1,
+  sh = 1,
+  sres = 1,
+  plotsfkt,
+  ww = 7,
+  wh = 7,
+  pointsize = 12,
+  dev.pointsize = 8,
+  paper = "special",
+  quality = 100,
+  units = "px",
+  bg = "white",
+  fileformat = "jpeg",
+  saveit = FALSE,
+  notinR = FALSE,
+  addformat = NULL
+)
 }
 \arguments{
 \item{filename}{name of the plot to be saved with the format type suffix.}

@@ -5,9 +5,20 @@
 \alias{LSD.densitylane}
 \title{Visualize a density in a rectangular fashion}
 \usage{
-densitylane(x, y, pos = 1, width = 0.4, colpal = "standard",
-  rev = FALSE, simulate = FALSE, daltonize = FALSE, cvd = "p",
-  alpha = NULL, horizontal = horizontal, nrcol = 75)
+densitylane(
+  x,
+  y,
+  pos = 1,
+  width = 0.4,
+  colpal = "standard",
+  rev = FALSE,
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  alpha = NULL,
+  horizontal = horizontal,
+  nrcol = 75
+)
 }
 \arguments{
 \item{x}{density$x values of a density object.}

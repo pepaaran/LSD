@@ -5,10 +5,26 @@
 \alias{LSD.linesplot}
 \title{One-dimensional scatterplot}
 \usage{
-linesplot(x, labels = NULL, col = "black", cols = NULL, alpha = 25,
-  xlim = NULL, ylim = NULL, xlab = NULL, ylab = "", las = 1,
-  outline = TRUE, cexbox = 0.6, addboxes = FALSE, border = "black",
-  range = 1.5, lwd = 1.5, main = "LSD.linesplot", ...)
+linesplot(
+  x,
+  labels = NULL,
+  col = "black",
+  cols = NULL,
+  alpha = 25,
+  xlim = NULL,
+  ylim = NULL,
+  xlab = NULL,
+  ylab = "",
+  las = 1,
+  outline = TRUE,
+  cexbox = 0.6,
+  addboxes = FALSE,
+  border = "black",
+  range = 1.5,
+  lwd = 1.5,
+  main = "LSD.linesplot",
+  ...
+)
 }
 \arguments{
 \item{x}{numeric data as vector, matrix, list or data.frame.}

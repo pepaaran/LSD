@@ -5,9 +5,22 @@
 \alias{LSD.plotmatrix}
 \title{Visualize two-dimensional data}
 \usage{
-plotmatrix(input, xlim = NULL, ylim = NULL, xlab = "", ylab = "",
-  main = "plotmatrix", type = "l", lwd = 2, at = NULL,
-  xlabels = NULL, ltys = NULL, add = FALSE, cols = NULL, ...)
+plotmatrix(
+  input,
+  xlim = NULL,
+  ylim = NULL,
+  xlab = "",
+  ylab = "",
+  main = "plotmatrix",
+  type = "l",
+  lwd = 2,
+  at = NULL,
+  xlabels = NULL,
+  ltys = NULL,
+  add = FALSE,
+  cols = NULL,
+  ...
+)
 }
 \arguments{
 \item{input}{a matrix with numerical entries.}

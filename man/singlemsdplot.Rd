@@ -5,8 +5,14 @@
 \alias{LSD.singlemsdplot}
 \title{Visualize two-dimensional data clusters (add to an existing plot)}
 \usage{
-singlemsdplot(input, col = "darkgreen", alpha = 50, bars = TRUE,
-  length = 0.25, at = NULL)
+singlemsdplot(
+  input,
+  col = "darkgreen",
+  alpha = 50,
+  bars = TRUE,
+  length = 0.25,
+  at = NULL
+)
 }
 \arguments{
 \item{input}{data as matrix or list.}

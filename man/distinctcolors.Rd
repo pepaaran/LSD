@@ -5,8 +5,13 @@
 \alias{LSD.distinctcolors}
 \title{Find preferably distinct R built-in colors}
 \usage{
-distinctcolors(nrcol = 10, method = "RGB", bw = FALSE, show = TRUE,
-  simulate = TRUE)
+distinctcolors(
+  nrcol = 10,
+  method = "RGB",
+  bw = FALSE,
+  show = TRUE,
+  simulate = TRUE
+)
 }
 \arguments{
 \item{nrcol}{a non-negative integer specifying the number of colors to be used (defaults to the length of \code{10}, if not specified).}

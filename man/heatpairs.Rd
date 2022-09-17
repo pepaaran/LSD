@@ -5,14 +5,35 @@
 \alias{LSD.heatpairs}
 \title{Pairwise colored scatterplot based on a two-dimensional Kernel Density Estimation}
 \usage{
-heatpairs(mat, main = "heatpairs", xlim = NULL, ylim = NULL,
-  labels = NULL, add.points = FALSE, group = NULL,
-  color.group = "magenta", method = "spearman", colpal = "heat",
-  simulate = FALSE, daltonize = FALSE, cvd = "p", alpha = NULL,
-  rev = FALSE, pch = 19, cexplot = 0.5, cor.cex = 2.5,
-  nrcol = 30, grid = 100, only = "none", add.contour = FALSE,
-  nlevels = 10, color.contour = "black", greyscale = FALSE,
-  log = "", ...)
+heatpairs(
+  mat,
+  main = "heatpairs",
+  xlim = NULL,
+  ylim = NULL,
+  labels = NULL,
+  add.points = FALSE,
+  group = NULL,
+  color.group = "magenta",
+  method = "spearman",
+  colpal = "heat",
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  alpha = NULL,
+  rev = FALSE,
+  pch = 19,
+  cexplot = 0.5,
+  cor.cex = 2.5,
+  nrcol = 30,
+  grid = 100,
+  only = "none",
+  add.contour = FALSE,
+  nlevels = 10,
+  color.contour = "black",
+  greyscale = FALSE,
+  log = "",
+  ...
+)
 }
 \arguments{
 \item{mat}{a matrix with numerical entries.}

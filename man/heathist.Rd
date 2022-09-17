@@ -5,11 +5,26 @@
 \alias{LSD.heathist}
 \title{Color a histogram}
 \usage{
-heathist(x, breaks = 20, xlab = NULL, ylab = NULL,
-  main = "heathist", colpal = "greys", rev = FALSE,
-  simulate = FALSE, daltonize = FALSE, cvd = "p", alpha = NULL,
-  nobox = FALSE, add.density = FALSE, col.density = "darkred",
-  add.rug = TRUE, col.rug = "black", nrcol = 100, ...)
+heathist(
+  x,
+  breaks = 20,
+  xlab = NULL,
+  ylab = NULL,
+  main = "heathist",
+  colpal = "greys",
+  rev = FALSE,
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  alpha = NULL,
+  nobox = FALSE,
+  add.density = FALSE,
+  col.density = "darkred",
+  add.rug = TRUE,
+  col.rug = "black",
+  nrcol = 100,
+  ...
+)
 }
 \arguments{
 \item{x}{a numeric vector.}

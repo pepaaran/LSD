@@ -5,15 +5,41 @@
 \alias{LSD.heatboxplot}
 \title{Heatboxplot: a colored boxplot}
 \usage{
-heatboxplot(x, horizontal = FALSE, add = FALSE, colpal = "standard",
-  rev = FALSE, simulate = FALSE, daltonize = FALSE, cvd = "p",
-  alpha = NULL, colpals = NULL, nrcol = 75, lwd = 1.75,
-  axes = TRUE, labels = NULL, xlim = NULL, ylim = NULL,
-  xlab = NULL, ylab = "", main = "heatboxplot", nolab = FALSE,
-  outline = TRUE, boxonly = FALSE, adjust = 1, quant.from = 0.25,
-  quant.to = 0.75, range = 1.5, border = "black",
-  plot.boxplot = TRUE, add.quartiles = TRUE, add.box = FALSE,
-  n.density = 1024, cexbox = 0.6, ...)
+heatboxplot(
+  x,
+  horizontal = FALSE,
+  add = FALSE,
+  colpal = "standard",
+  rev = FALSE,
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  alpha = NULL,
+  colpals = NULL,
+  nrcol = 75,
+  lwd = 1.75,
+  axes = TRUE,
+  labels = NULL,
+  xlim = NULL,
+  ylim = NULL,
+  xlab = NULL,
+  ylab = "",
+  main = "heatboxplot",
+  nolab = FALSE,
+  outline = TRUE,
+  boxonly = FALSE,
+  adjust = 1,
+  quant.from = 0.25,
+  quant.to = 0.75,
+  range = 1.5,
+  border = "black",
+  plot.boxplot = TRUE,
+  add.quartiles = TRUE,
+  add.box = FALSE,
+  n.density = 1024,
+  cexbox = 0.6,
+  ...
+)
 }
 \arguments{
 \item{x}{data as vector, matrix, list or data.frame.}

@@ -5,9 +5,18 @@
 \alias{LSD.heatbarplot}
 \title{Color a barplot.}
 \usage{
-heatbarplot(x, colpal = "heat", simulate = FALSE, daltonize = FALSE,
-  cvd = "p", alpha = NULL, rev = FALSE, horizontal = FALSE,
-  nrcol = 100, ...)
+heatbarplot(
+  x,
+  colpal = "heat",
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  alpha = NULL,
+  rev = FALSE,
+  horizontal = FALSE,
+  nrcol = 100,
+  ...
+)
 }
 \arguments{
 \item{x}{a histogram object.}

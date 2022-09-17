@@ -5,10 +5,21 @@
 \alias{LSD.singlefusionplot}
 \title{Visualize two-dimensional data clusters (add to an existing plot)}
 \usage{
-singlefusionplot(x, y, fromto = c(0.05, 0.95), colpal = "standardheat",
-  simulate = FALSE, daltonize = FALSE, cvd = "p", nrcol = 25,
-  outer.col = "grey", rev = FALSE, alpha = NULL,
-  quartiles.col = c("grey", "black", "grey"), add.quartiles = TRUE)
+singlefusionplot(
+  x,
+  y,
+  fromto = c(0.05, 0.95),
+  colpal = "standardheat",
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  nrcol = 25,
+  outer.col = "grey",
+  rev = FALSE,
+  alpha = NULL,
+  quartiles.col = c("grey", "black", "grey"),
+  add.quartiles = TRUE
+)
 }
 \arguments{
 \item{x}{a numeric vector.}

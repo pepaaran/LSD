@@ -154,7 +154,7 @@ heatscatterpoints = function(x,y,pch = 19,cexplot = 0.5,nrcol = 30,grid = 100,co
       theme_classic() +
       labs( x=xlab, y=ylab )
     
-    print(gg)
+    # print(gg)
     
   } else {
     

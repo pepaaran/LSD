@@ -3,6 +3,8 @@
 \name{disco}
 \alias{disco}
 \alias{LSD.disco}
+\alias{display.colorpalette}
+\alias{LSD.display.colorpalette}
 \title{Disco (DISplays COlorpalettes)}
 \usage{
 disco(colpal = NULL, nrcol = NULL, alpha = NULL)

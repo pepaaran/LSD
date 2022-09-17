@@ -5,12 +5,29 @@
 \alias{LSD.fusionplot}
 \title{Visualize two-dimensional data clusters}
 \usage{
-fusionplot(x, y, label = NULL, main = NULL, xlim = NULL,
-  ylim = NULL, fromto = c(0.05, 0.95), colpal = "standardheat",
-  simulate = FALSE, daltonize = FALSE, cvd = "p", nrcol = 25,
-  outer.col = "lightgrey", quartiles.col = c("grey", "black", "grey"),
-  add.quartiles = TRUE, separate = TRUE, rev = FALSE, size = TRUE,
-  alpha = NULL, axes = TRUE, ...)
+fusionplot(
+  x,
+  y,
+  label = NULL,
+  main = NULL,
+  xlim = NULL,
+  ylim = NULL,
+  fromto = c(0.05, 0.95),
+  colpal = "standardheat",
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  nrcol = 25,
+  outer.col = "lightgrey",
+  quartiles.col = c("grey", "black", "grey"),
+  add.quartiles = TRUE,
+  separate = TRUE,
+  rev = FALSE,
+  size = TRUE,
+  alpha = NULL,
+  axes = TRUE,
+  ...
+)
 }
 \arguments{
 \item{x}{a numeric vector.}

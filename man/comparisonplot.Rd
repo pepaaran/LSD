@@ -5,11 +5,29 @@
 \alias{cplot}
 \title{Comparisonplot: a fancy scatterplot}
 \usage{
-comparisonplot(x, y, histbreaks = 30, adjust = 1, colpal = "heat",
-  simulate = FALSE, daltonize = FALSE, cvd = "p", alpha = NULL,
-  rev = FALSE, main = "comparisonplot", cor = FALSE, xlab = NULL,
-  ylab = NULL, xlim = NULL, ylim = NULL, ab = FALSE,
-  add.density = FALSE, col.density = "darkred", pimp = FALSE, ...)
+comparisonplot(
+  x,
+  y,
+  histbreaks = 30,
+  adjust = 1,
+  colpal = "heat",
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  alpha = NULL,
+  rev = FALSE,
+  main = "comparisonplot",
+  cor = FALSE,
+  xlab = NULL,
+  ylab = NULL,
+  xlim = NULL,
+  ylim = NULL,
+  ab = FALSE,
+  add.density = FALSE,
+  col.density = "darkred",
+  pimp = FALSE,
+  ...
+)
 }
 \arguments{
 \item{x}{a numeric vector.}

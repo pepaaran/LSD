@@ -5,8 +5,15 @@
 \alias{LSD.colorpalette}
 \title{Provides colorpalettes containing R built-in colors}
 \usage{
-colorpalette(colpal, nrcol = NULL, simulate = FALSE,
-  daltonize = FALSE, cvd = "p", alpha = NULL, rev = FALSE)
+colorpalette(
+  colpal,
+  nrcol = NULL,
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  alpha = NULL,
+  rev = FALSE
+)
 }
 \arguments{
 \item{colpal}{a character vector containing R built-in color names or a name of a \code{LSD} colorpalette as a character string (see disco() or \code{\link{disco}}).}

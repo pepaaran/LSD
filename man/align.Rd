@@ -5,10 +5,22 @@
 \alias{LSD.align}
 \title{Visualize two-dimensional data in a color encoded fashion}
 \usage{
-align(input, colpal = "heat", simulate = FALSE, daltonize = FALSE,
-  cvd = "p", alpha = NULL, label = FALSE, digits = 1,
-  border = NULL, xlim = NULL, ylim = NULL, main = NULL,
-  axes = TRUE, ...)
+align(
+  input,
+  colpal = "heat",
+  simulate = FALSE,
+  daltonize = FALSE,
+  cvd = "p",
+  alpha = NULL,
+  label = FALSE,
+  digits = 1,
+  border = NULL,
+  xlim = NULL,
+  ylim = NULL,
+  main = NULL,
+  axes = TRUE,
+  ...
+)
 }
 \arguments{
 \item{input}{matrix or list with any type of entries.}
